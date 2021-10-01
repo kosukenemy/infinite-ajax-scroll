@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite ajax scroll</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        position: relative;
+        counter-reset: number 0;   
+    }
+    img { width: 100%; }
+    #app {
+        font-weight: 300;
+    }
+    body h1 {
+        font-weight: 600;
+        text-align: center;
+        margin: 0px auto 30px;
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        padding: 10px;
+        letter-spacing: 0.3rem;
+        position: sticky;
+        top: 0;
+    }
+    #app .list {
+        padding: 2% 0;
+        counter-increment : num;
+        transition: all 1s ease-in;
+    }
+
+    #app .list::before {
+        counter-increment: number 1;
+        content: counter(number) " ";
+    }
+    #app .list {
+        width: 500px;
+        margin: 0 auto;
+    }
+</style>
+<body>
+    <h1>Infinite ajax scroll</h1>
+    <div id="app"></div>
+
+    <script src="dist/main.js"></script>
+</body>
+</html>

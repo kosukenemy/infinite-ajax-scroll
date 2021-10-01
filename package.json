@@ -1,0 +1,24 @@
+{
+  "name": "infinite-ajax-scroll",
+  "version": "1.0.0",
+  "description": "infinite-ajax-scroll",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.3",
+    "webpack": "^5.55.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.3.0"
+  },
+  "dependencies": {
+    "@types/jquery": "^3.5.6",
+    "jquery": "^3.6.0"
+  }
+}
